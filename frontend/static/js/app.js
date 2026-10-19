@@ -1,4 +1,4 @@
-/* Makro Retail Price Intelligence — lógica del dashboard (frontend). */
+/* Scrappy Doo — lógica del dashboard (frontend). */
 
 const API = {
   config: () => fetch('/api/config').then(r => r.json()),
@@ -122,6 +122,8 @@ async function init() {
   document.getElementById('nameInput').addEventListener('keydown', e => { if (e.key === 'Enter') doSearchName(); });
   document.getElementById('bulkBtn').addEventListener('click', doBulk);
   document.getElementById('catalogBtn').addEventListener('click', doCatalogImport);
+  document.getElementById('catalogExtractBtn').addEventListener('click', doCatalogExtract);
+  document.getElementById('bulkExampleBtn').addEventListener('click', downloadBulkExample);
 
   const menuBtn = document.getElementById('menuBtn');
   const closeBtn = document.getElementById('sidebarCloseBtn');
@@ -368,7 +370,7 @@ function renderReport(report) {
   sorted.forEach(r => {
     const reg = regularPrice(r);
     const w = Math.max(8, Math.round((reg / (maxEff * 1.05)) * 100));
-    const color = (CONFIG.retailers[r.retailer] || {}).color || '#e2001a';
+    const color = (CONFIG.retailers[r.retailer] || {}).color || '#0077B6';
     const isMakro = r.retailer === 'makro';
     const isMin = !isMakro && reg === k.min_price;
     const makroTag = isMakro ? ' <span class="badge bg-danger">MAKRO</span>' : '';
@@ -498,7 +500,7 @@ async function exportExcel(ean, cost, category, description, city) {
   const blob = await resp.blob();
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = url; a.download = `makro_precios_${ean}.xlsx`; a.click();
+  a.href = url; a.download = `scrappy_doo_precios_${ean}.xlsx`; a.click();
   URL.revokeObjectURL(url);
 }
 
@@ -522,7 +524,7 @@ async function loadDashboard() {
   if (categoryChart) categoryChart.destroy();
   categoryChart = new Chart(document.getElementById('categoryChart'), {
     type: 'bar',
-    data: { labels, datasets: [{ label: 'Productos', data: values, backgroundColor: '#e2001a' }] },
+    data: { labels, datasets: [{ label: 'Productos', data: values, backgroundColor: '#0077B6' }] },
     options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { precision: 0 } } } },
   });
 }
@@ -648,6 +650,106 @@ async function doBulk() {
   }
   out.innerHTML = html;
   loadHistory();
+}
+
+async function doCatalogExtract() {
+  const box = document.getElementById('catalogExtractResult');
+  const raw = document.getElementById('catalogLinks').value.trim();
+  const links = raw.split('\n').map(s => s.trim()).filter(Boolean);
+  if (!links.length) {
+    box.innerHTML = '<div class="alert alert-warning">Pega al menos un enlace de búsqueda.</div>';
+    return;
+  }
+  box.innerHTML = '<div class="loading"><div class="spinner-border text-primary"></div><div class="mt-2">Iniciando descarga...</div></div>';
+  try {
+    const resp = await fetch('/api/catalog-extract', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ links }) });
+    const data = await resp.json();
+    if (!resp.ok || data.error) {
+      box.innerHTML = '<div class="alert alert-danger">' + (data.error || 'Error al iniciar.') + '</div>';
+      return;
+    }
+    pollCatalogJob(data.job_id);
+  } catch (e) {
+    box.innerHTML = '<div class="alert alert-danger">Error: ' + e.message + '</div>';
+  }
+}
+
+async function pollCatalogJob(jobId) {
+  const box = document.getElementById('catalogExtractResult');
+  try {
+    const resp = await fetch('/api/catalog-extract/progress/' + jobId);
+    const job = await resp.json();
+    renderCatalogJob(job);
+    if (job.status === 'done') {
+      if (job.result_path) {
+        try {
+          const d = await fetch('/api/catalog-extract/result/' + jobId);
+          if (d.ok) {
+            const blob = await d.blob();
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'catalogos.xlsx';
+            a.click();
+            URL.revokeObjectURL(url);
+          }
+        } catch (e) {}
+      }
+      return;
+    }
+    setTimeout(function () { pollCatalogJob(jobId); }, 1500);
+  } catch (e) {
+    box.innerHTML = '<div class="alert alert-danger">Error al consultar progreso: ' + e.message + '</div>';
+  }
+}
+
+function renderCatalogJob(job) {
+  const box = document.getElementById('catalogExtractResult');
+  const labels = { pending: 'En espera', running: 'Descargando', done: 'Listo', vacio: 'Sin resultados', error: 'Error' };
+  let html = '';
+  if (job.status === 'running') {
+    html += '<div class="alert alert-info"><i class="bi bi-arrow-repeat"></i> Descargando ' + job.links.length + ' enlace(s)...</div>';
+  }
+  html += '<div class="d-flex flex-column gap-2">';
+  for (const l of (job.links || [])) {
+    const total = l.total;
+    let width = 0;
+    if (l.estado === 'done' || l.estado === 'vacio') width = 100;
+    else if (total && total > 0) width = Math.min(100, Math.round((l.filas / total) * 100));
+    else if (l.estado === 'running') width = 100;
+    const barClass = l.estado === 'error' ? 'bg-danger' : (l.estado === 'done' || l.estado === 'vacio' ? 'bg-success' : 'bg-primary');
+    const filasLabel = l.filas ? (l.filas + (total ? ' de ' + total : '') + ' filas') : '';
+    html += '<div class="card p-2">' +
+      '<div class="d-flex justify-content-between flex-wrap gap-1">' +
+        '<span class="fw-bold small">' + (l.tienda || '...') + '</span>' +
+        '<span class="text-muted small">' + (labels[l.estado] || l.estado) + (filasLabel ? ' · ' + filasLabel : '') + '</span>' +
+      '</div>' +
+      '<div class="progress mt-1" style="height:8px"><div class="progress-bar ' + barClass + '" style="width:' + width + '%"></div></div>' +
+      (l.mensaje ? '<div class="text-muted small mt-1">' + l.mensaje + '</div>' : '') +
+      '<div class="text-muted small text-truncate">' + (l.url || '') + '</div>' +
+    '</div>';
+  }
+  html += '</div>';
+  if (job.status === 'done') {
+    if (job.result_path) {
+      html += '<div class="alert alert-success mt-2">Descarga completada. Si no inició automáticamente, <a href="/api/catalog-extract/result/' + job.id + '">descárgala aquí</a>.</div>';
+    } else if (job.error) {
+      html += '<div class="alert alert-danger mt-2">' + job.error + '</div>';
+    }
+  }
+  box.innerHTML = html;
+}
+
+async function downloadBulkExample() {
+  const resp = await fetch('/api/bulk/example');
+  if (!resp.ok) { alert('Error al descargar el ejemplo'); return; }
+  const blob = await resp.blob();
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'ejemplo_carga_masiva.xlsx';
+  a.click();
+  URL.revokeObjectURL(url);
 }
 
 document.addEventListener('DOMContentLoaded', init);

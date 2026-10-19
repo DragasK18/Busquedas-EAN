@@ -33,7 +33,7 @@ from config import (
 )
 from database import init_db, repository
 from export import export_report
-from services import bulk, catalog_import, pricing_service
+from services import bulk, catalog_import, catalog_extract, pricing_service
 from services.catalog_import import ensure_default_makro_catalog
 from services.keys import synthetic_key
 from services.weight import format_weight_for_query, format_weight_label, parse_weight
@@ -320,8 +320,79 @@ def api_export():
 
 
 # ──────────────────────────────────────────────────────────────────────────
+# API: DESCARGA DE CATÁLOGOS (Scrappy Doo)
+# ──────────────────────────────────────────────────────────────────────────
+@app.post("/api/catalog-extract")
+def api_catalog_extract():
+    """
+    Inicia una descarga de catálogos en segundo plano a partir de enlaces de
+    búsqueda (uno por línea). Devuelve un job_id para consultar el progreso.
+
+    Body JSON: { links: ["https://...", "https://..."] } (lista o texto).
+    """
+    data = request.get_json(silent=True) or {}
+    links_raw = data.get("links") or []
+    if isinstance(links_raw, str):
+        links = [l.strip() for l in links_raw.splitlines() if l.strip()]
+    else:
+        links = [str(l).strip() for l in links_raw if str(l).strip()]
+    if not links:
+        return jsonify({"error": "Pega al menos un enlace de búsqueda."}), 400
+
+    job_id = catalog_extract.start_job(links)
+    return jsonify({"job_id": job_id})
+
+
+@app.get("/api/catalog-extract/progress/<job_id>")
+def api_catalog_extract_progress(job_id):
+    """Devuelve el estado del trabajo: estado, enlaces con progreso y resultado."""
+    job = catalog_extract.get_job(job_id)
+    if job is None:
+        return jsonify({"error": "Trabajo no encontrado."}), 404
+    return jsonify(job)
+
+
+@app.get("/api/catalog-extract/result/<job_id>")
+def api_catalog_extract_result(job_id):
+    """Descarga el Excel resultante de un trabajo terminado."""
+    job = catalog_extract.get_job(job_id)
+    if job is None or job.get("status") != "done":
+        return jsonify({"error": "El trabajo aún no termina o no existe."}), 404
+    path = job.get("result_path")
+    if not path:
+        return jsonify({"error": job.get("error") or "Sin resultados."}), 400
+    return send_file(path, as_attachment=True, download_name=Path(path).name)
+
+
+# ──────────────────────────────────────────────────────────────────────────
 # API: CARGA MASIVA
 # ──────────────────────────────────────────────────────────────────────────
+@app.get("/api/bulk/example")
+def api_bulk_example():
+    """Genera un archivo Excel de ejemplo para la carga masiva."""
+    import io
+
+    import pandas as pd
+
+    df = pd.DataFrame(
+        [
+            {"Codigo_o_Nombre": "7501043130769", "Costo": 12000, "Categoria": "", "Ciudad": "", "Margen_Objetivo": 15},
+            {"Codigo_o_Nombre": "7702004001308", "Costo": 5000, "Categoria": "", "Ciudad": "", "Margen_Objetivo": 15},
+            {"Codigo_o_Nombre": "Acetaminofén 500 mg x 20 tabletas", "Costo": 8000, "Categoria": "", "Ciudad": "Bogotá", "Margen_Objetivo": 15},
+            {"Codigo_o_Nombre": "Dolex Forte 500/65 mg x 10", "Costo": 9000, "Categoria": "", "Ciudad": "", "Margen_Objetivo": 20},
+        ]
+    )
+    buf = io.BytesIO()
+    with pd.ExcelWriter(buf, engine="openpyxl") as writer:
+        df.to_excel(writer, index=False, sheet_name="Productos")
+    buf.seek(0)
+    return send_file(
+        buf,
+        as_attachment=True,
+        download_name="ejemplo_carga_masiva.xlsx",
+        mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    )
+
 @app.post("/api/bulk")
 def api_bulk():
     """

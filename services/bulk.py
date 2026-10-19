@@ -48,6 +48,7 @@ def _normalize_col(name: str) -> str:
 
 _COLUMN_ALIASES = {
     "ean": {"ean", "codigo", "codigo_ean", "barcode"},
+    "code_or_name": {"codigo_o_nombre", "codigo_nombre", "ean_o_nombre", "codigo_o_descripcion", "referencia"},
     "cost": {"costo", "cost", "costo_actual", "costo_makro"},
     "description": {"descripcion", "description", "nombre", "producto", "articulo"},
     "category": {"categoria", "category"},
@@ -85,6 +86,16 @@ def _to_int(value) -> Optional[int]:
         return int(float(value))
     except (ValueError, TypeError):
         return None
+
+
+def _looks_like_ean(value) -> bool:
+    """True si el valor parece un código de barras (solo dígitos, 8/12/13/14)."""
+    if value is None:
+        return False
+    s = str(value).strip()
+    if s.endswith(".0"):
+        s = s[:-2]
+    return s.isdigit() and len(s) in (8, 12, 13, 14)
 
 
 def _parse_target_margin(value) -> Optional[float]:
@@ -204,10 +215,11 @@ def process_bulk_file(
     cols = _map_columns(df)
     has_ean = "ean" in cols
     has_description = "description" in cols
-    if not has_ean and not has_description:
+    mixed_col = cols.get("code_or_name")
+    if not has_ean and not has_description and not mixed_col:
         raise ValueError(
-            "El archivo debe contener una columna 'EAN' o 'Descripción'/'Nombre' "
-            "(para productos sin código de barras, como Fruver a granel). "
+            "El archivo debe contener una columna 'Codigo_o_Nombre' (mixta: códigos y nombres), "
+            "o una columna 'EAN' o 'Descripción'/'Nombre'. "
             "Columnas encontradas: " + ", ".join(map(str, df.columns))
         )
     has_city_col = "city" in cols
@@ -229,6 +241,16 @@ def process_bulk_file(
         )
         if description and description.lower() == "nan":
             description = None
+
+        # Columna mixta: sin columna EAN/Descripción separada, se clasifica
+        # cada valor: numérico => EAN, texto => nombre del producto.
+        if mixed_col is not None and not has_ean and not has_description:
+            raw_mixed = str(row[mixed_col]).strip() if row[mixed_col] is not None else ""
+            if raw_mixed and raw_mixed.lower() != "nan":
+                if _looks_like_ean(raw_mixed):
+                    ean = raw_mixed
+                else:
+                    description = raw_mixed
 
         if not ean and not description:
             continue  # fila sin identificador utilizable (ni EAN ni nombre)

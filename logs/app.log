@@ -129,3 +129,124 @@
 2026-10-19 14:21:22,344 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:21:22] "GET /api/config HTTP/1.1" 200 -
 2026-10-19 14:21:22,593 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:21:22] "GET /api/products HTTP/1.1" 200 -
 2026-10-19 14:21:22,646 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:21:22] "GET /api/catalog/stats HTTP/1.1" 200 -
+2026-10-19 15:33:33,241 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 15:33:33,242 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 15:33:33,269 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-19 15:33:33,269 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-10-19 15:33:33,271 [INFO] werkzeug:  * Restarting with stat
+2026-10-19 15:33:34,910 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 15:33:34,911 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 15:33:34,930 [WARNING] werkzeug:  * Debugger is active!
+2026-10-19 15:33:34,935 [INFO] werkzeug:  * Debugger PIN: 117-648-372
+2026-10-19 15:33:35,304 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:33:35] "GET / HTTP/1.1" 200 -
+2026-10-19 15:33:35,327 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:33:35] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2026-10-19 15:33:35,328 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:33:35] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-10-19 15:33:35,505 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:33:35] "GET /api/config HTTP/1.1" 200 -
+2026-10-19 15:33:35,769 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:33:35] "GET /api/products HTTP/1.1" 200 -
+2026-10-19 15:33:35,831 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:33:35] "GET /api/catalog/stats HTTP/1.1" 200 -
+2026-10-19 15:34:22,330 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:34:22] "GET /api/dashboard HTTP/1.1" 200 -
+2026-10-19 15:34:23,426 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:34:23] "GET /api/history HTTP/1.1" 200 -
+2026-10-19 15:34:24,419 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:34:24] "GET /api/alerts HTTP/1.1" 200 -
+2026-10-19 15:34:25,160 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:34:25] "GET /api/catalog/stats HTTP/1.1" 200 -
+2026-10-19 15:58:08,203 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 15:58:08,204 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 15:58:08,227 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-19 15:58:08,227 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-10-19 15:58:08,229 [INFO] werkzeug:  * Restarting with stat
+2026-10-19 15:58:09,734 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 15:58:09,734 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 15:58:09,753 [WARNING] werkzeug:  * Debugger is active!
+2026-10-19 15:58:09,758 [INFO] werkzeug:  * Debugger PIN: 117-648-372
+2026-10-19 15:58:10,732 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:58:10] "GET / HTTP/1.1" 200 -
+2026-10-19 15:58:10,760 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:58:10] "GET /static/css/app.css HTTP/1.1" 200 -
+2026-10-19 15:58:10,761 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:58:10] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-10-19 15:58:10,941 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:58:10] "GET /api/config HTTP/1.1" 200 -
+2026-10-19 15:58:11,205 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:58:11] "GET /api/products HTTP/1.1" 200 -
+2026-10-19 15:58:11,264 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:58:11] "GET /api/catalog/stats HTTP/1.1" 200 -
+2026-10-19 15:58:15,242 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:58:15] "GET /api/dashboard HTTP/1.1" 200 -
+2026-10-19 15:58:16,140 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:58:16] "GET /api/history HTTP/1.1" 200 -
+2026-10-19 15:58:16,595 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:58:16] "GET /api/alerts HTTP/1.1" 200 -
+2026-10-19 15:58:17,109 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 15:58:17] "GET /api/catalog/stats HTTP/1.1" 200 -
+2026-10-19 16:00:41,371 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:00:41] "POST /api/catalog-extract HTTP/1.1" 200 -
+2026-10-19 16:10:59,667 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 16:10:59,667 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 16:10:59,699 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-19 16:10:59,699 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-10-19 16:10:59,701 [INFO] werkzeug:  * Restarting with stat
+2026-10-19 16:11:01,282 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 16:11:01,282 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 16:11:01,301 [WARNING] werkzeug:  * Debugger is active!
+2026-10-19 16:11:01,306 [INFO] werkzeug:  * Debugger PIN: 117-648-372
+2026-10-19 16:11:01,326 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:11:01] "GET / HTTP/1.1" 200 -
+2026-10-19 16:11:01,357 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:11:01] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2026-10-19 16:11:01,359 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:11:01] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-10-19 16:11:01,536 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:11:01] "GET /api/config HTTP/1.1" 200 -
+2026-10-19 16:11:01,776 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:11:01] "GET /api/products HTTP/1.1" 200 -
+2026-10-19 16:11:01,830 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:11:01] "GET /api/catalog/stats HTTP/1.1" 200 -
+2026-10-19 16:11:39,605 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:11:39] "POST /api/catalog-extract HTTP/1.1" 200 -
+2026-10-19 16:11:55,110 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:11:55] "POST /api/catalog-extract HTTP/1.1" 200 -
+2026-10-19 16:11:58,518 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:11:58] "POST /api/catalog-extract HTTP/1.1" 200 -
+2026-10-19 16:12:03,990 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:12:03] "POST /api/catalog-extract HTTP/1.1" 200 -
+2026-10-19 16:14:33,042 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 16:14:33,042 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 16:14:33,070 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-19 16:14:33,071 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-10-19 16:14:33,073 [INFO] werkzeug:  * Restarting with stat
+2026-10-19 16:14:34,638 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 16:14:34,638 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 16:14:34,657 [WARNING] werkzeug:  * Debugger is active!
+2026-10-19 16:14:34,661 [INFO] werkzeug:  * Debugger PIN: 117-648-372
+2026-10-19 16:14:38,878 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:38] "GET / HTTP/1.1" 200 -
+2026-10-19 16:14:38,913 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:38] "GET /static/css/app.css?v=5 HTTP/1.1" 200 -
+2026-10-19 16:14:38,915 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:38] "GET /static/js/app.js?v=5 HTTP/1.1" 200 -
+2026-10-19 16:14:39,104 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:39] "GET /api/config HTTP/1.1" 200 -
+2026-10-19 16:14:39,218 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-10-19 16:14:39,369 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:39] "GET /api/products HTTP/1.1" 200 -
+2026-10-19 16:14:39,424 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:39] "GET /api/catalog/stats HTTP/1.1" 200 -
+2026-10-19 16:14:41,564 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:41] "POST /api/catalog-extract HTTP/1.1" 200 -
+2026-10-19 16:14:41,571 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:41] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:14:43,081 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:43] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:14:44,592 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:44] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:14:46,104 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:46] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:14:47,612 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:47] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:14:49,121 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:49] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:14:50,629 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:50] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:14:52,177 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:52] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:14:53,716 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:53] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:14:55,222 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:55] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:14:56,729 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:56] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:14:58,235 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:58] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:14:59,741 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:14:59] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:01,247 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:01] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:02,756 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:02] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:04,261 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:04] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:05,767 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:05] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:07,278 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:07] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:08,790 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:08] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:10,297 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:10] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:11,804 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:11] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:14,154 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:14] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:16,144 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:16] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:18,144 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:18] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:19,650 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:19] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:22,145 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:22] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:24,145 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:24] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:26,146 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:26] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:28,144 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:28] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:30,148 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:30] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:32,145 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:32] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:34,152 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:34] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:36,152 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:36] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:38,145 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:38] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:40,147 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:40] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:42,146 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:42] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:44,155 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:44] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:46,144 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:46] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:48,145 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:48] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:50,149 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:50] "GET /api/catalog-extract/progress/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:50,188 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:50] "GET /api/catalog-extract/result/aecd007f1538 HTTP/1.1" 200 -
+2026-10-19 16:15:59,806 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 16:15:59] "[36mGET /api/catalog-extract/result/aecd007f1538 HTTP/1.1[0m" 304 -
