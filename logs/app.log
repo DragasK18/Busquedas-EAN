@@ -1,0 +1,131 @@
+2026-10-19 11:01:52,303 [INFO] services.catalog_import: Importando catálogo Makro por defecto desde C:\Users\AUX DATOS\Downloads\BUSQUEDA-EAN-main\BUSQUEDA-EAN-main\data\PRODUCTOS_MAKRO.xlsx
+2026-10-19 11:04:35,618 [INFO] app: Catálogo Makro cargado: 14843 productos (14843 con SKU)
+2026-10-19 11:04:35,624 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 11:04:35,624 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 11:04:35,715 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-19 11:04:35,716 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-10-19 11:04:35,719 [INFO] werkzeug:  * Restarting with stat
+2026-10-19 11:04:37,355 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 11:04:37,355 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 11:04:37,374 [WARNING] werkzeug:  * Debugger is active!
+2026-10-19 11:04:37,378 [INFO] werkzeug:  * Debugger PIN: 117-648-372
+2026-10-19 11:05:51,845 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:05:51] "GET / HTTP/1.1" 200 -
+2026-10-19 11:05:51,893 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:05:51] "GET /static/css/app.css HTTP/1.1" 200 -
+2026-10-19 11:05:51,913 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:05:51] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-10-19 11:05:52,074 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:05:52] "GET /api/config HTTP/1.1" 200 -
+2026-10-19 11:05:52,209 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:05:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-10-19 11:05:52,330 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:05:52] "GET /api/products HTTP/1.1" 200 -
+2026-10-19 11:05:52,389 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:05:52] "GET /api/catalog/stats HTTP/1.1" 200 -
+2026-10-19 11:05:58,729 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:05:58] "GET /api/history HTTP/1.1" 200 -
+2026-10-19 11:05:59,370 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:05:59] "GET /api/dashboard HTTP/1.1" 200 -
+2026-10-19 11:06:00,764 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:06:00] "GET /api/alerts HTTP/1.1" 200 -
+2026-10-19 11:06:01,260 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:06:01] "GET /api/catalog/stats HTTP/1.1" 200 -
+2026-10-19 11:06:02,712 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:06:02] "GET /api/dashboard HTTP/1.1" 200 -
+2026-10-19 11:06:39,878 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:06:39] "POST /api/search HTTP/1.1" 200 -
+2026-10-19 11:06:40,443 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:06:40] "POST /api/search HTTP/1.1" 200 -
+2026-10-19 11:07:36,364 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:07:36] "GET /api/dashboard HTTP/1.1" 200 -
+2026-10-19 11:07:37,427 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:07:37] "GET /api/history HTTP/1.1" 200 -
+2026-10-19 11:07:38,945 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:07:38] "GET /api/alerts HTTP/1.1" 200 -
+2026-10-19 11:07:40,026 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:07:40] "GET /api/catalog/stats HTTP/1.1" 200 -
+2026-10-19 11:07:41,301 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:07:41] "GET /api/dashboard HTTP/1.1" 200 -
+2026-10-19 11:08:35,326 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:08:35] "POST /api/search HTTP/1.1" 200 -
+2026-10-19 11:10:42,895 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:10:42] "POST /api/search HTTP/1.1" 200 -
+2026-10-19 11:10:57,197 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:10:57] "POST /api/search HTTP/1.1" 200 -
+2026-10-19 11:12:15,731 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:12:15] "POST /api/search-name HTTP/1.1" 200 -
+2026-10-19 11:12:30,795 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:12:30] "POST /api/search HTTP/1.1" 200 -
+2026-10-19 11:33:41,124 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 11:33:41,124 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 11:33:41,158 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-19 11:33:41,159 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-10-19 11:33:41,161 [INFO] werkzeug:  * Restarting with stat
+2026-10-19 11:33:42,865 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 11:33:42,865 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 11:33:42,884 [WARNING] werkzeug:  * Debugger is active!
+2026-10-19 11:33:42,889 [INFO] werkzeug:  * Debugger PIN: 117-648-372
+2026-10-19 11:33:46,850 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:33:46] "GET / HTTP/1.1" 200 -
+2026-10-19 11:33:46,894 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:33:46] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2026-10-19 11:33:46,895 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:33:46] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-10-19 11:33:47,068 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:33:47] "GET /api/config HTTP/1.1" 200 -
+2026-10-19 11:33:47,328 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:33:47] "GET /api/products HTTP/1.1" 200 -
+2026-10-19 11:33:47,380 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:33:47] "GET /api/catalog/stats HTTP/1.1" 200 -
+2026-10-19 11:33:49,953 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:33:49] "GET / HTTP/1.1" 200 -
+2026-10-19 11:33:49,990 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:33:49] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2026-10-19 11:33:49,991 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:33:49] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-10-19 11:33:50,021 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:33:50] "GET /api/config HTTP/1.1" 200 -
+2026-10-19 11:33:50,266 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:33:50] "GET /api/products HTTP/1.1" 200 -
+2026-10-19 11:33:50,316 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:33:50] "GET /api/catalog/stats HTTP/1.1" 200 -
+2026-10-19 11:35:27,822 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:35:27] "POST /api/search-name HTTP/1.1" 200 -
+2026-10-19 11:37:02,450 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:37:02] "POST /api/search-name HTTP/1.1" 200 -
+2026-10-19 11:38:10,985 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:38:10] "POST /api/search HTTP/1.1" 200 -
+2026-10-19 11:38:45,641 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:38:45] "POST /api/search HTTP/1.1" 200 -
+2026-10-19 11:39:37,277 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:39:37] "POST /api/search-name HTTP/1.1" 200 -
+2026-10-19 11:41:05,072 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:41:05] "POST /api/search-name HTTP/1.1" 200 -
+2026-10-19 11:41:37,341 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:41:37] "GET /api/history HTTP/1.1" 200 -
+2026-10-19 11:41:38,222 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:41:38] "GET /api/dashboard HTTP/1.1" 200 -
+2026-10-19 11:41:41,623 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:41:41] "GET /api/catalog/stats HTTP/1.1" 200 -
+2026-10-19 11:41:42,535 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:41:42] "GET /api/alerts HTTP/1.1" 200 -
+2026-10-19 11:41:43,296 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:41:43] "GET /api/dashboard HTTP/1.1" 200 -
+2026-10-19 11:41:44,045 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:41:44] "GET /api/history HTTP/1.1" 200 -
+2026-10-19 11:41:48,280 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:41:48] "GET /api/dashboard HTTP/1.1" 200 -
+2026-10-19 11:42:56,153 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:42:56] "POST /api/search-name HTTP/1.1" 200 -
+2026-10-19 11:44:03,663 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 11:44:03] "POST /api/search-name HTTP/1.1" 200 -
+2026-10-19 14:01:34,586 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 14:01:34,586 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 14:01:34,624 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-19 14:01:34,624 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-10-19 14:01:34,627 [INFO] werkzeug:  * Restarting with stat
+2026-10-19 14:01:36,178 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 14:01:36,178 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 14:01:36,196 [WARNING] werkzeug:  * Debugger is active!
+2026-10-19 14:01:36,201 [INFO] werkzeug:  * Debugger PIN: 117-648-372
+2026-10-19 14:02:11,176 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 14:02:11,177 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 14:02:11,200 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-19 14:02:11,201 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-10-19 14:02:11,203 [INFO] werkzeug:  * Restarting with stat
+2026-10-19 14:02:12,730 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 14:02:12,731 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 14:02:12,748 [WARNING] werkzeug:  * Debugger is active!
+2026-10-19 14:02:12,753 [INFO] werkzeug:  * Debugger PIN: 117-648-372
+2026-10-19 14:09:36,644 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 14:09:36,644 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 14:09:36,668 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-19 14:09:36,668 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-10-19 14:09:36,670 [INFO] werkzeug:  * Restarting with stat
+2026-10-19 14:09:38,119 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 14:09:38,120 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 14:09:38,137 [WARNING] werkzeug:  * Debugger is active!
+2026-10-19 14:09:38,142 [INFO] werkzeug:  * Debugger PIN: 117-648-372
+2026-10-19 14:09:42,529 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:09:42] "GET / HTTP/1.1" 200 -
+2026-10-19 14:09:42,562 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:09:42] "GET /static/css/app.css HTTP/1.1" 200 -
+2026-10-19 14:09:42,582 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:09:42] "GET /static/js/app.js HTTP/1.1" 200 -
+2026-10-19 14:09:42,736 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:09:42] "GET /api/config HTTP/1.1" 200 -
+2026-10-19 14:09:42,978 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:09:42] "GET /api/products HTTP/1.1" 200 -
+2026-10-19 14:09:43,029 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:09:43] "GET /api/catalog/stats HTTP/1.1" 200 -
+2026-10-19 14:21:05,662 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 14:21:05,662 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 14:21:05,688 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-10-19 14:21:05,688 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-10-19 14:21:05,690 [INFO] werkzeug:  * Restarting with stat
+2026-10-19 14:21:07,197 [INFO] app: Iniciando Retail Price Intelligence Colombia en 127.0.0.1:5000
+2026-10-19 14:21:07,197 [INFO] app: Modo scraping: REAL (VTEX + Playwright)
+2026-10-19 14:21:07,216 [WARNING] werkzeug:  * Debugger is active!
+2026-10-19 14:21:07,221 [INFO] werkzeug:  * Debugger PIN: 117-648-372
+2026-10-19 14:21:09,900 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:21:09] "GET / HTTP/1.1" 200 -
+2026-10-19 14:21:09,923 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:21:09] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2026-10-19 14:21:09,927 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:21:09] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-10-19 14:21:10,099 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:21:10] "GET /api/config HTTP/1.1" 200 -
+2026-10-19 14:21:10,342 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:21:10] "GET /api/products HTTP/1.1" 200 -
+2026-10-19 14:21:10,384 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:21:10] "GET /api/catalog/stats HTTP/1.1" 200 -
+2026-10-19 14:21:22,259 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:21:22] "GET / HTTP/1.1" 200 -
+2026-10-19 14:21:22,300 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:21:22] "[36mGET /static/css/app.css HTTP/1.1[0m" 304 -
+2026-10-19 14:21:22,303 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:21:22] "[36mGET /static/js/app.js HTTP/1.1[0m" 304 -
+2026-10-19 14:21:22,344 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:21:22] "GET /api/config HTTP/1.1" 200 -
+2026-10-19 14:21:22,593 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:21:22] "GET /api/products HTTP/1.1" 200 -
+2026-10-19 14:21:22,646 [INFO] werkzeug: 127.0.0.1 - - [19/Oct/2026 14:21:22] "GET /api/catalog/stats HTTP/1.1" 200 -
